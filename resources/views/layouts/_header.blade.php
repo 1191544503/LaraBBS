@@ -32,6 +32,12 @@
                 <li><a href="{{ route('login') }}">登录</a></li>
                 <li><a href="{{ route('register') }}">注册</a></li>
                 @else
+                    <li>
+                        <a href="{{ route('topics.create') }}">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新建帖子
+                        </a>
+
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             <span class="user-avatar pull-left" style="margin-right:8px; margin-top:-5px;">
@@ -41,6 +47,7 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
+
                             <li>
                                 <a href="{{ route('users.show', Auth::id()) }}">
                                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
